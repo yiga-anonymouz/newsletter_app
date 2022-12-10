@@ -7,7 +7,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 const { render } = require('ejs')
